@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>This example finds the sum of all numbers in an array:</p>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+
+<script>
+    const number=[34,23,15,7,54];
+    let sum=number.reduce(myFunction);
+    document.getElementById("demo").innerHTML="The original array is:: "+number;
+
+    document.getElementById("demo2").innerHTML="The sum is:: "+sum;
+
+    function myFunction(total,value,index,array){
+        return total+value;
+    }
+</script>
+</body>
+</html>
