@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Example of For each method</h3>
+    <p>Calls function once for each element</p>
+    <p id="demo"></p>
+    <script>
+      const number=[67,12,54,23,88];
+       let txt="";
+       number.forEach(myFunction);
+       document.getElementById("demo").innerHTML=txt;
+
+       function myFunction(value,index,array)
+       {
+        txt+=value+"<br>";
+
+       }
+
+    </script>
+</body>
+</html>
