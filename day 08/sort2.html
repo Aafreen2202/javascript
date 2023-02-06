@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Sort numeric array</h2>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        const points=[30,60,15,1,90];
+        document.getElementById("demo").innerHTML=points;
+
+        points.sort(function(a,b){return a-b});
+        document.getElementById("demo2").innerHTML=points;
+      
+        points.sort(function(a,b){return b-a});
+        document.getElementById("demo3").innerHTML=points;
+    </script>
+</body>
+</html>
