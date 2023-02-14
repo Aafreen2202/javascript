@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="handleAfterOnClick()">Display text After 15sec</button>
+    <button onclick="handleEveryOnClick()">Display text After 1sec</button>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        //setTimout run only once
+        function handleAfterOnClick()
+        {
+            const timeOutId=setTimeout(()=>
+            {
+                console.log("After 15 sec");
+                document.getElementById("demo").innerHTML=
+                "I am printed after 15 sec";
+            },15000);
+            //To stop the execution
+               // clearTimeout(timeOutId);
+
+        }
+        //setInterval runs repeatedly
+        let timerId;
+        function handleEveryOnClick()
+        {
+            let count=0;
+            clearInterval(timerId);
+            timerId=setInterval(()=>{
+                document.getElementById("demo2").innerHTML=count++;
+
+            },1000);
+            //To stop after 10 sec
+            setTimeout(()=>{
+                clearInterval(timerId);
+            },10000);
+        }
+    </script>
+</body>
+</html>
